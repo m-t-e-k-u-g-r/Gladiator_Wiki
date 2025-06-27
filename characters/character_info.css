@@ -1,0 +1,174 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+    a:visited {
+        color: black;
+    }
+}
+body {
+    background-image: url("images/background_image.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Layout */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.content-container {
+    background-color: #A9A9A9;
+    width: 60%;
+    min-width: 670px;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+}
+.top-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.left-top {
+    flex: 2;
+    min-width: 0;
+}
+
+/* Top Bar & Header */
+.top-bar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+}
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1;
+    color: black;
+}
+.search-input {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+/* Bio Box & Table */
+.bio-box {
+    h2, h3 {
+        text-align: center;
+        background-color: #800000;
+        padding: 0.5rem;
+    }
+    border: 3px solid #800000;
+    border-radius: 4px;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    width: 35%;
+    padding: 0.2rem;
+}
+.bio-box h2,
+.bio-box h3,
+.bio-box .portrait-img,
+.bio-box .bio-table {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bio-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    a:link {
+        text-decoration: underline; /* overwrites line 6 */
+    }
+}
+.bio-table td {
+    padding: 0.3rem 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+.bio-table td:first-child {
+    font-weight: bold;
+    width: 40%;
+}
+.portrait-img {
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+/* Table of Contents */
+.table-of-contents {
+    border: 1px solid black;
+    max-width: 40%;
+}
+.table-of-contents hr {
+    border: none;
+    border-top: 1px solid black;
+}
+.table-of-contents h3, p {
+    padding-left: 1rem;
+}
+.table-of-contents a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Content Paragraphs */
+.content-paragraph {}
+.content-paragraph hr {
+    border: none;
+    border-top: 2px solid #696969;
+    margin-right: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .content-container {
+        min-width: 0;
+        width: 100%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .top-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .bio-box {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 1rem;
+        order: 2;
+    }
+    .left-top {
+        order: 1;
+    }
+}
+
+/* Überschreibungen am Ende lassen */
+.left-top {
+    p {
+        a {
+            text-decoration: underline; /* overwrites line 6 */
+        }
+    }
+}
